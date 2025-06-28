@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>ToDo App</title>
+
+</head>
+<body>
+  <div class="sidebar">
+    <h2>ToDo</h2>
+    <div class="menu-item">Dashboard</div>
+  </div>
+  <div class="content">
+    <div class="breadcrumbs">Dashboard > Overview</div>
+    <div class="header">
+      <h2>My Todo</h2>
+      <button onclick="showTaskForm()">+ New task</button>
+    </div>
+    <div class="search-section">
+      <input type="text" placeholder="Search" id="searchBox" oninput="searchTasks()" />
+    </div>
+    <div class="columns">
+      <div class="column" id="toStart">
+        <h3><span class="dot teal"></span> To Start</h3>
+        <div class="add-new" onclick="showTaskForm('toStart')">+ Add New</div>
+      </div>
+      <div class="column" id="inProgress">
+        <h3><span class="dot orange"></span> In Progress</h3>
+      </div>
+      <div class="column" id="completed">
+        <h3><span class="dot green"></span> Completed</h3>
+      </div>
+    </div>
+
+    <div id="taskForm" style="display:none; margin-top:20px;">
+      <input type="text" id="taskTitle" placeholder="Task Title" />
+      <textarea id="taskDesc" placeholder="Task Description"></textarea>
+      <input type="date" id="taskDate" />
+      <input type="hidden" id="editTaskId" />
+      <button onclick="saveTask()">Save Task</button>
+    </div>
+  </div>
+
+</body>
+</html>
