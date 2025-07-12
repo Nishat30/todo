@@ -106,12 +106,14 @@ body {
 }
 
 .task {
+  position: relative;
   background: #f9f9fb;
   padding: 12px;
   border-radius: 8px;
   margin-bottom: 10px;
-  position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: visible; /* important */
+  z-index: 1; 
 }
 
 .task:hover {
@@ -129,6 +131,7 @@ body {
   top: 8px;
   right: 8px;
   cursor: pointer;
+  z-index: 10;
 }
 
 .dropdown {
@@ -139,7 +142,7 @@ body {
   background: white;
   border: 1px solid #ccc;
   border-radius: 6px;
-  z-index: 10;
+  z-index: 9999;
 }
 
 .dropdown button {
@@ -192,7 +195,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  max-width: 500px;
+  max-width:420px;
 }
 
 #taskForm input, #taskForm textarea {
@@ -205,7 +208,7 @@ body {
 
 #taskForm button {
   padding: 10px 16px;
-  background-color: #43a047;
+  background-color: #1561dbff;
   color: white;
   border: none;
   border-radius: 6px;
@@ -262,7 +265,7 @@ body {
   top: 10px;
   right: 20px;
   font-size: 14px;
-  z-index: 1000;
+  z-index: 10;
   background: #fff;
   padding: 4px 10px;
   border-radius: 8px;
