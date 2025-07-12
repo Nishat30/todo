@@ -6,13 +6,15 @@
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
   <title>ToDo App</title>
-
 </head>
 <body>
   <div class="sidebar">
     <h2>ToDo</h2>
     <div class="menu-item">Dashboard</div>
+    <h3 class="history-heading">History</h3>
+    <ul id="historyList" class="history-list"></ul>
   </div>
+
   <div class="content">
     <div class="breadcrumbs">Dashboard > Overview</div>
     <div class="header">
@@ -43,6 +45,5 @@
       <button onclick="saveTask()">Save Task</button>
     </div>
   </div>
-
 </body>
 </html>
